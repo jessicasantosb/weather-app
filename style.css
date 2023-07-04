@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Agdasima', sans-serif;
+    background: linear-gradient(196deg, rgba(154,197,244,1) 20%, rgba(153,219,245,1) 65%, rgba(167,236,238,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    background-color: #73BBC9;
+    box-shadow: #000 3px 3px 4px;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 2;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 400px;
+        line-height: 1;
+        margin: 5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        max-width: 270px;
+    }
+}
+
+/* FORM CONTAINER */
+.form {
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.form h2 {
+    letter-spacing: 3px;
+}
+
+#city-input {
+    box-shadow: #9BCDD2 1px 2px 4px;
+    border: 1px solid #73BBC9;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    height: 60px;
+    width: 300px;
+}
+
+#search {
+  background: #73BBC9;
+  border: 1px solid ;
+  box-shadow: #9BCDD2 1px 2px 4px;
+  color: #fff;
+  height: 60px;
+  width: 60px;
+  border-radius:  10px;
+  cursor: pointer;
+}
+
+#search:hover, #search:active {
+  background-color: #fff;
+  color: #73BBC9;
+}
+
+@media (max-width: 600px) {
+    .form h2 {
+        letter-spacing: 1px;
+    }
+
+    #city-input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    .form h2 {
+        font-size: 1.25rem;
+    }
+
+    #city-input {
+        width: 250px;
+        height: 40px;
+    }
+
+    #search {
+        height: 40px;     
+    }
+}
+
+/*  WEATHER DATA */
+.hide {
+    display: none;
+}
+
+#temperature-container h2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 5px solid;
+    border-image: linear-gradient(to right, rgba(154,197,244,1) 30%, rgba(153,219,245,1) 65%) 1;
+    margin: 0 45px; 
+    padding: 15px 0;
+    font-size: 2rem;
+}
+
+#temperature {
+    font-size: 2rem;
+}
+
+#description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 10px 0;
+    font-size: 1.5rem;
+}
+
+#details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#humidity {
+    padding-right: 1.5rem;
+    border-right: 5px solid;
+    border-image: linear-gradient(to right, rgba(154,197,244,1) 30%, rgba(153,219,245,1) 65%) 1;
+}
+
+@media (max-width: 600px) {
+    #temperature-container h2, #temperature {
+        font-size: 1.25rem;
+    }
+
+    #description-container, #details-container {
+        font-size: 1rem;
+    }
+    
+    #country-flag {
+        height: 35px;
+    }
+
+}
