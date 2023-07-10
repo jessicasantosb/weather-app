@@ -18,33 +18,29 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     const query = req.body.cityInput;
     const apiKey = "b73d0e7bb40743bd67b6529abe9cbedd";
-    const url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&units=metric&appid="+ apiKey;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${apiKey}`;
     
     https.get(url, function(response) {
         response.on("data", function(data) {
             const weatherData = JSON.parse(data);
-            const city = weatherData.name;
             const flag = weatherData.sys.country;
             const temperature = weatherData.main.temp;
             const description = weatherData.weather[0].description;
             const icon = weatherData.weather[0].icon;
-            const iconUrl = "http://openweathermap.org/img/wn/"+icon+".png";
+            const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
             const humidity = weatherData.main.humidity;
             const wind = weatherData.wind.speed;
 
-            res.write("<h1> the city "+ query +"</h1>");
-            res.write("<img src="+ iconUrl +">");
-            res.write("<h1> the temperature "+ temperature +"</h1>");
-            res.write("<h1> the  "+ description +"</h1>");
-            res.write('<img src= "https://flagsapi.com/'+ flag +'/flat/64.png">');
-            res.write("<h1> the  "+ humidity +"</h1>");
-            res.write("<h1> the  "+ wind +"</h1>");
+            res.write("<h2> The weather is currently "+ description +"</h2>");            
+            res.write("<h1> The temperature in "+ query + " is " + temperature +"</h1>");
+            res.write("<h3> Humidity: " + humidity + "</h3>")
+            res.write("<h3> Wind: " + wind + "</h3>")
 
             res.send();
         })
     })
 });
 
-app.listen(3000, function() {
+app.listen(3000, () => {
     console.log("Server is running on port 3000.");
 })

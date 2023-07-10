@@ -2,9 +2,10 @@ const apiKey = "b73d0e7bb40743bd67b6529abe9cbedd";
 
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector("#search");
+const error = document.querySelector("#error");
 
 const cityElement = document.querySelector("#city");
-const temperature = document.querySelector("#temperature span");
+const temperature = document.querySelector("#temperature")
 const description  = document.querySelector("#description");
 const weatherIcon  = document.querySelector("#weather-icon");
 const country = document.querySelector("#country-flag");
@@ -23,16 +24,19 @@ const getWeatherData = async (city) => {
 const showWeatherData = async (city) => {
     const data = await getWeatherData(city);
     if (data.name === undefined) {
-        alert("[ERROR] Please check the city name")
+        error.innerText = "⚠️ Please, check the city name.";
+        setTimeout(() => {
+            error.innerText = '';
+        }, 4000);
     }
-    cityElement.innerText = data.name;
-    temperature.innerText = parseInt(data.main.temp);
-    description.innerText = data.weather[0].description;
     weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
+    description.innerText = data.weather[0].description;
+    cityElement.innerText = data.name;
+    temperature.innerText = `${parseInt(data.main.temp)} °C`;
     country.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`);
     humidity.innerText = `${data.main.humidity}%`;
     wind.innerText = `${data.wind.speed} km/h`;
-    weatherData.classList.remove("hide")
+    weatherData.classList.remove("hide");
 };
 
 searchBtn.addEventListener("click", (e) => {
@@ -49,4 +53,4 @@ cityInput.addEventListener("keyup", (e) => {
 });
 
 // SETUP LANGUAGE
-window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"languages":["en","pt","fr","de","it","es"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}}
+window.gtranslateSettings = {"default_language":"en","detect_browser_language":true,"languages":["en","pt","fr","de","it","es"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}};

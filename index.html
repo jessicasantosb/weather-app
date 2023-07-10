@@ -17,24 +17,25 @@
         <div class="form">
             <h2>Check your city weather:</h2>
             <form class="form-container" action="/" method="post">
-                <input type="text" name="cityInput" id="city-input" placeholder=" Type the name of your city">
+                <input type="text" name="cityInput" id="city-input" placeholder=" Type your city">
                 <button id="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
+            <div id="error"></div>
         </div>
         <div id="weather-data" class="hide">
+            <div id="description-container">
+                <img src="" alt="Weather conditions" id="weather-icon">
+                <p id="description"></p>
+            </div>
             <div id="temperature-container">
+                <p id="temperature"></p>
                 <h2>
                     <i class="fa-solid fa-location-dot"></i>
                     <span id="city"></span>
                     <img src="" alt="Country flag" id="country-flag">
                 </h2>
-                <p id="temperature"><span></span> &deg;C</p>
-            </div>
-            <div id="description-container">
-                <p id="description"></p>
-                <img src="" alt="Weather conditions" id="weather-icon">
             </div>
             <div id="details-container">
                 <p id="humidity">
@@ -45,6 +46,9 @@
                     <i class="fa-solid fa-wind"></i>
                     <span></span>
                 </p>
+            </div>
+            <div id="info-container">
+                <a href="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=-14.6263&lon=-43.4399&zoom=6" target="_blank">OpenWeatherMap.com</a>
             </div>
         </div>
     </div>
