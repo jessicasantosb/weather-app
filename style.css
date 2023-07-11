@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     font-family: 'Agdasima', sans-serif;
-    height: 100vh;
     background: linear-gradient(196deg, rgba(154,197,244,1) 20%, rgba(153,219,245,1) 100%);
+    height: 110%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ body {
     background-color: #73BBC9;
     box-shadow: #000 3px 3px 4px;
     border-radius: 20px;
-    width: 500px;
+    max-width: 500px;
     text-align: center;
     line-height: 2;
     padding: 10px;
