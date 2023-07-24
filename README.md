@@ -5,7 +5,7 @@
 <p align="center">Welcome to my project! Here, you can see my first version of a simple web application that shows weather data using Java Script and API.</p>
 <br>
 <h1 align="center">
-    <a href="https://jessicasantosb.github.io/weather-app/">Live preview soon</a>
+    <a href="https://jessicasantosb.github.io/weather-app/">See live preview</a>
 </h1>
 <br>
 <p align="center">
