@@ -1,19 +1,18 @@
 # Weather App
 
 ## Project description
-<h4 align="center"> 
-	🚧  Weather app 🚀 Building...  🚧
-</h4>
-<p align="center">Welcome to my web page! Here, you'll find a web application that shows weather data using React, API, Java Script and Node.js.</p>    
-<div align="center">
-  <p align="center">
-    <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="200"/>
-  </p>
-</div>
+
+<p align="center">Welcome to my project! Here, you can see my first version of a simple web application that shows weather data using Java Script and API.</p>
 <br>
 <h1 align="center">
-    <a href="">Live preview soon</a>
+    <a href="https://jessicasantosb.github.io/weather-app/">Live preview soon</a>
 </h1>
+<br>
+<p align="center">
+  <kbd>
+    <img src="https://github.com/jessicasantosb/weather-app/blob/main/weather.png?raw=true"></img>
+  </kbd>
+</p>
 <br>
 <p align="center">🚀 Created by Jessica Bandeira</p>
 <br>
